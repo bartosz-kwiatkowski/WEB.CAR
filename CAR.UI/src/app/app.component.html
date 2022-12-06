@@ -1,0 +1,23 @@
+<div>
+  <img class="card" src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600" />
+</div>
+
+<table>
+  <thead>
+
+    <th>Marka</th>
+    <th>Model</th>
+    <th>Data</th>
+    <th>Price</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let car of carr">
+    <td> {{car.mark}}</td>
+    <td> {{car.model}}</td>
+    <td> {{car.data}}</td>
+    <td> {{car.prince}}</td>
+
+
+    </tr>
+  </tbody>
+</table>
