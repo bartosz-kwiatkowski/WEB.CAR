@@ -1,0 +1,22 @@
+<div *ngIf="car">
+<h2>{{car.mark}}</h2>
+<div>
+  Mark:
+  <input [(ngModel)]="car.mark" placeholder="Mark"/>
+</div>
+<div>
+  Model:
+  <input [(ngModel)]="car.model" placeholder="Model"/>
+</div>
+<div>
+  Data:
+  <input [(ngModel)]="car.data" placeholder="Data"/>
+</div>
+<div>
+  Price:
+  <input [(ngModel)]="car.prince" placeholder="Price"/>
+</div>
+<button (click)="updateCar(car)" *ngIf="car.id"> update</button>
+<button (click)="deleteCar(car)" *ngIf="car.id"> delete</button>
+<button (click)="createCar(car)" *ngIf="!car.id"> create</button>
+</div>

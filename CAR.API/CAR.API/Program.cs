@@ -17,7 +17,7 @@ builder.Services.AddDbContext<DataContext>(options =>
 builder.Services.AddCors(options => options.AddPolicy(name: "CarOrigins",
     policy => 
 {
-    policy.WithOrigins("http://localhost:57896").AllowAnyMethod().AllowAnyHeader();
+    policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
 }));
 
 var app = builder.Build();

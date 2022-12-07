@@ -10,6 +10,7 @@ import { CarSService } from './services/car-s.service';
 export class AppComponent {
   title = 'CAR.UI';
   carr : Car[]= [];
+  carToEdit?:Car;
 
   constructor(private carservice: CarSService ){}
     ngOnInit():void
@@ -18,7 +19,19 @@ export class AppComponent {
       this.carservice
       .getCar()
       .subscribe((result:Car[]) =>(this.carr=result));
+    }
+    updateCarList(carr:Car[])
+    {
+      this.carr=carr;
+    }
 
+    initNewCar()
+    {
+      this.carToEdit=new Car();
+    }
+    editCar(car:Car)
+    {
+      this.carToEdit=car;
     }
 
 
