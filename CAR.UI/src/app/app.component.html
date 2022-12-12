@@ -1,19 +1,41 @@
-<button class="btn1" (click)="initNewCar()">Create new Car</button>
+<header>
+  <div class="navbar navbar-dark bg-primary shadow-sm">
+    <div class="navbar-brand align-item-center d-flex">
+    <i class="fas fa-shipping-fast">
+      <strong>CAR</strong>
+    </i>
+    <div class="from-group">
+      <input type="text" class="form-control" placeholder="search">
+    </div>
+    <span class="fas fa-search search-icon"></span>
 
+  </div>
+  <button class="byn btn-primary">
+    <i class="fas fa-cart-plus"></i>
+  </button>
 
-<div>
-  <img class="card" src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600" />
+  </div>
+</header>
+<div class="cards-container" *ngFor="let car of carr">
+  <div class="card-example">
+  <img class="header-img" src="https://images.pexels.com/photos/170811/pexels-photo-170811.jpeg?auto=compress&cs=tinysrgb&w=600"/>
+  <div class="card-body">
+    <p> Marka :{{car.mark}}</p>
+    <p> Model :{{car.model}}</p>
+    <p> Data : {{car.data}}</p>
+    <p> Prince : {{car.prince}}</p>
+    <p><button (click)="editCar(car)">Edit</button></p>
+  </div>
+   </div>
 </div>
-
-<table>
-  <thead>
-
+<table >
+  <thead >
     <th>Marka</th>
     <th>Model</th>
     <th>Data</th>
     <th>Price</th>
   </thead>
-  <tbody>
+  <tbody >
     <tr *ngFor="let car of carr">
     <td> {{car.mark}}</td>
     <td> {{car.model}}</td>
@@ -25,4 +47,5 @@
     </tr>
   </tbody>
 </table>
-<app-edit-car [car]="carToEdit" (carUpdate)="updateCarList($event)"></app-edit-car>
+<button class="btn1" (click)="initNewCar()">Create new Car</button>
+<app-edit-car class="cards-container" [car]="carToEdit" (carUpdate)="updateCarList($event)"></app-edit-car>

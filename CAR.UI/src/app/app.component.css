@@ -4,11 +4,40 @@
   margin: auto;
   padding: 5px;
   border-radius: 10%;
+
+}
+.card-example{
+  width: 300px;
+  height: 300px;
+  box-shadow: 0 0 10px 1px rgb(0 0 0 /20%);
+  margin: 10px;
+  border-radius: 15px;
+}
+.form-control{
+  border-radius: 3px;
+  width: 600px;
+  margin-left: 20px;
 }
 .btn1 {
   color : rgb(49, 46, 46);
   background-color: rgba(255, 222, 121, 0.96);
   border-radius: 10px 0 0 10px;
   font-size: 16px;
+
+}
+.card-body{
+  padding: 15px;
+  justify-content: center;
+}
+.cards-container{
+  display:flex;
+
+  justify-content: center;
+  margin-top: 10px;
+}
+.header-img{
+  width: 100%;
+  height: 100px;
+  border-radius: 15px 15px 0 0;
 }
 

@@ -12,6 +12,9 @@ export class EditCarComponent implements OnInit{
 @Input() car?: Car;
 @Output() carUpdate = new EventEmitter<Car[]>();
 constructor(private carSService:CarSService){}
+@Input()
+
+
 ngOnInit(): void {}
 
 updateCar(car:Car)
